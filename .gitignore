@@ -1,0 +1,12 @@
+# vibe-to-ui Design Context — do not sync secrets
+.env
+.env.*
+*.pem
+*.key
+*credentials*
+id_rsa
+id_rsa.*
+id_ed25519
+id_ed25519.*
+.DS_Store
+.write-check-*
