@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Product inspiration — dify</title>
+<style>
+:root { --paper:#DDCED2; --ink:#121212; --signal:#003BFF; --surface:#F8F9FA; --muted:#5C5C5C; }
+* { box-sizing:border-box; }
+html, body { margin:0; padding:0; background:var(--paper); color:var(--ink); font-family:Inter,"Noto Sans SC","PingFang SC",sans-serif; }
+.top { padding:48px max(24px,calc((100vw - 960px)/2)); border-bottom:2px solid var(--ink); }
+.top h1 { margin:0 0 12px; font-size:clamp(28px,5vw,48px); letter-spacing:-.04em; }
+.meta { color:var(--muted); font-size:14px; font-family:"JetBrains Mono",monospace; }
+.main { padding:32px max(24px,calc((100vw - 960px)/2)) 64px; max-width:960px; }
+.pill { display:inline-block; padding:4px 10px; border:2px solid var(--ink); font:700 11px "JetBrains Mono",monospace; }
+table { width:100%; border-collapse:collapse; background:var(--surface); border:2px solid var(--ink); box-shadow:8px 8px 0 var(--ink); font-size:14px; }
+th, td { text-align:left; padding:12px 14px; border-bottom:2px solid var(--ink); }
+th { color:var(--muted); font-weight:700; font-size:11px; text-transform:uppercase; letter-spacing:.06em; font-family:"JetBrains Mono",monospace; }
+tr:last-child td { border-bottom:0; }
+a { color:var(--signal); font-weight:600; }
+.note { margin-top:20px; color:var(--muted); font-size:14px; line-height:1.6; }
+</style>
+</head>
+<body>
+  <header class="top">
+    <h1>Dify - 构建生产级 AI 应用</h1>
+    <div class="meta">product · dify · dify.ai · type mix: landing</div>
+  </header>
+  <main class="main">
+    <p>Cross-page visual positioning. Open a page preview for full-scroll annotated analysis. Default <code>apply</code> uses the product <code>design-seed.md</code>.</p>
+    <table>
+      <thead><tr><th>Page</th><th>Type</th><th>Coverage</th><th>Title</th></tr></thead>
+      <tbody>
+<tr>
+  <td><a href="pages/home/preview.html">home</a></td>
+  <td>landing</td>
+  <td><span class="pill">full-scroll</span></td>
+  <td>Dify - 构建生产级 AI 应用</td>
+</tr>
+      </tbody>
+    </table>
+    <p class="note">Each URL page requires full-scroll captures (fullpage + consecutive viewports) before mid-page claims are marked observed.</p>
+  </main>
+</body>
+</html>

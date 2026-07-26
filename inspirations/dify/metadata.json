@@ -1,0 +1,14 @@
+{
+  "kind": "product",
+  "id": "dify",
+  "title": "Dify - 构建生产级 AI 应用",
+  "primaryHost": "dify.ai",
+  "createdAt": "2026-07-26T04:00:42Z",
+  "updatedAt": "2026-07-26T04:10:11Z",
+  "pages": [
+    "home"
+  ],
+  "keywords": [],
+  "primaryPageType": "landing",
+  "analysisStatus": "scaffold"
+}

@@ -1,0 +1,15 @@
+{
+  "kind": "product",
+  "id": "langchain",
+  "title": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+  "primaryHost": "langchain.com",
+  "createdAt": "2026-07-25T14:31:18Z",
+  "updatedAt": "2026-07-26T03:12:47Z",
+  "pages": [
+    "engine",
+    "home"
+  ],
+  "keywords": [],
+  "primaryPageType": "landing",
+  "analysisStatus": "scaffold"
+}

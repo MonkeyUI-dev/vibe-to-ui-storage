@@ -1,0 +1,393 @@
+{
+  "version": 1,
+  "inspirationId": "langchain/home",
+  "generatedAt": "2026-07-25T14:45:00Z",
+  "themeProfile": null,
+  "pageType": "landing",
+  "categoriesCovered": [
+    "composition",
+    "color",
+    "typography",
+    "space-components",
+    "visual-evidence",
+    "narrative"
+  ],
+  "synthesis": {
+    "eyebrow": "DESIGN SYSTEM ANALYSIS / OBSERVED",
+    "title": "LangChain 的视觉 DNA",
+    "traits": [
+      {
+        "label": "MOOD",
+        "title": "冷静的工程自信",
+        "body": "近黑舞台、低饱和蓝光和充足留白，让复杂 Agent 平台显得可控，而非炫技。"
+      },
+      {
+        "label": "COMPOSITION",
+        "title": "中心舞台 + 边缘证据",
+        "body": "首屏把生命周期概念放在中轴；UI、logo 与数据退到边缘，形成清晰的视觉优先级。"
+      },
+      {
+        "label": "TYPE",
+        "title": "轻、宽、少层级",
+        "body": "大字号粗体标题配简短副句；导航安静退后，平台段落用 H3/H4 清晰分层。"
+      },
+      {
+        "label": "COLOR",
+        "title": "蓝只作为信号",
+        "body": "冷蓝服务于标题光感、状态与路径；大面积保持近黑，OSS 段落切到白底重置可读性。"
+      },
+      {
+        "label": "EVIDENCE",
+        "title": "真实 UI 代替插画",
+        "body": "trace、图表、表格、客户 logo 与硬数据成为品牌视觉素材，同时承担可信度解释。"
+      },
+      {
+        "label": "RHYTHM",
+        "title": "叙事像一条生命周期",
+        "body": "定位 → 背书 → 平台能力 → 开源框架 → 客户故事 → 量化规模 → 转化收尾，每屏推进一个认知动作。"
+      }
+    ],
+    "seed": {
+      "eyebrow": "DESIGN.md READY SEED",
+      "visualDirection": "深色、低噪声的工程舞台；以冷蓝作为稀缺信号，以真实运行界面取代装饰插画。",
+      "dos": "保留中轴留白、让产品证据可读、用 sticky rail 组织长平台叙事、深浅段落交替。",
+      "donts": "不要泛滥渐变、玻璃卡片、无意义 3D 图形，或复制 LangChain 专有图形与 logo。"
+    }
+  },
+  "frames": [
+    {
+      "id": "fullpage",
+      "file": "captures/fullpage.jpg",
+      "label": "fullpage",
+      "annotations": []
+    },
+    {
+      "id": "frame-01",
+      "file": "captures/frame-01.jpg",
+      "label": "frame-01",
+      "annotations": [
+        "a1",
+        "a2",
+        "a3"
+      ]
+    },
+    {
+      "id": "frame-02",
+      "file": "captures/frame-02.jpg",
+      "label": "frame-02",
+      "annotations": []
+    },
+    {
+      "id": "frame-03",
+      "file": "captures/frame-03.jpg",
+      "label": "frame-03",
+      "annotations": [
+        "a4",
+        "a5",
+        "a6"
+      ]
+    },
+    {
+      "id": "frame-04",
+      "file": "captures/frame-04.jpg",
+      "label": "frame-04",
+      "annotations": []
+    },
+    {
+      "id": "frame-05",
+      "file": "captures/frame-05.jpg",
+      "label": "frame-05",
+      "annotations": []
+    },
+    {
+      "id": "frame-06",
+      "file": "captures/frame-06.jpg",
+      "label": "frame-06",
+      "annotations": []
+    },
+    {
+      "id": "frame-07",
+      "file": "captures/frame-07.jpg",
+      "label": "frame-07",
+      "annotations": [
+        "a7",
+        "a8",
+        "a9"
+      ]
+    },
+    {
+      "id": "frame-08",
+      "file": "captures/frame-08.jpg",
+      "label": "frame-08",
+      "annotations": []
+    },
+    {
+      "id": "frame-09",
+      "file": "captures/frame-09.jpg",
+      "label": "frame-09",
+      "annotations": [
+        "a10",
+        "a11",
+        "a12"
+      ]
+    },
+    {
+      "id": "frame-10",
+      "file": "captures/frame-10.jpg",
+      "label": "frame-10",
+      "annotations": []
+    }
+  ],
+  "annotations": [
+    {
+      "id": "a1",
+      "frame": "frame-01",
+      "number": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.32
+      },
+      "category": "composition",
+      "label": "Centered hero hierarchy",
+      "body": "Single-column hero: glowing headline → subhead → dual CTAs → abstract lifecycle diagram (Build/Test/Deploy/Monitor). Nav stays peripheral; value prop owns the vertical center.",
+      "confidence": "high",
+      "kinds": [
+        "observed",
+        "transferable"
+      ]
+    },
+    {
+      "id": "a2",
+      "frame": "frame-01",
+      "number": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.32
+      },
+      "category": "color",
+      "label": "Dark canvas + luminous accent",
+      "body": "Near-black navy ground with white ink and cyan-blue glow on the headline. Primary CTA inverts to white fill; secondary stays ghost — accent reads as light, not a flat brand block.",
+      "confidence": "high",
+      "kinds": [
+        "observed",
+        "transferable"
+      ]
+    },
+    {
+      "id": "a3",
+      "frame": "frame-01",
+      "number": 3,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.72
+      },
+      "category": "narrative",
+      "label": "Lifecycle metaphor in hero",
+      "body": "Abstract curved paths with labeled stages replace a product screenshot above the fold — process framing before capability depth.",
+      "confidence": "high",
+      "kinds": [
+        "observed",
+        "transferable"
+      ]
+    },
+    {
+      "id": "a4",
+      "frame": "frame-03",
+      "number": 1,
+      "anchor": {
+        "x": 0.12,
+        "y": 0.45
+      },
+      "category": "composition",
+      "label": "Sticky platform rail",
+      "body": "Left vertical rail lists Engine / Observability / Evaluation / Deployment / Fleet with active-state dot — scroll-synced chapter navigation for a long product story.",
+      "confidence": "high",
+      "kinds": [
+        "observed",
+        "transferable"
+      ]
+    },
+    {
+      "id": "a5",
+      "frame": "frame-03",
+      "number": 2,
+      "anchor": {
+        "x": 0.65,
+        "y": 0.35
+      },
+      "category": "visual-evidence",
+      "label": "Product UI as proof",
+      "body": "Each platform beat pairs copy with a real LangSmith UI capture (issues, traces, eval charts) — credibility via literal product chrome, not abstract icons alone.",
+      "confidence": "high",
+      "kinds": [
+        "observed",
+        "transferable"
+      ]
+    },
+    {
+      "id": "a6",
+      "frame": "frame-03",
+      "number": 3,
+      "anchor": {
+        "x": 0.55,
+        "y": 0.55
+      },
+      "category": "space-components",
+      "label": "Dark product band density",
+      "body": "Moderate density: H4 + paragraph + bullet list + outbound pill link; UI mock in rounded container with subtle border — readable without card grid clutter.",
+      "confidence": "high",
+      "kinds": [
+        "observed",
+        "transferable"
+      ]
+    },
+    {
+      "id": "a7",
+      "frame": "frame-07",
+      "number": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.55
+      },
+      "category": "color",
+      "label": "Light-band alternation",
+      "body": "Page shifts to white canvas for OSS frameworks — dark→light rhythm resets legibility and signals a new narrative beat (open source vs platform).",
+      "confidence": "high",
+      "kinds": [
+        "observed",
+        "transferable"
+      ]
+    },
+    {
+      "id": "a8",
+      "frame": "frame-07",
+      "number": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.55
+      },
+      "category": "composition",
+      "label": "Three-card framework grid",
+      "body": "Equal-width cards with diagram thumbnail → icon → title → one-line posture → explore link. Parallel choices, not a carousel.",
+      "confidence": "high",
+      "kinds": [
+        "observed",
+        "transferable"
+      ]
+    },
+    {
+      "id": "a9",
+      "frame": "frame-07",
+      "number": 3,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.55
+      },
+      "category": "typography",
+      "label": "Operational subcopy on light",
+      "body": "On white bands, headings stay bold sans; body copy tightens to product-fit one-liners — lower drama than hero display type.",
+      "confidence": "high",
+      "kinds": [
+        "observed",
+        "transferable"
+      ]
+    },
+    {
+      "id": "a10",
+      "frame": "frame-09",
+      "number": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.35
+      },
+      "category": "visual-evidence",
+      "label": "Quantified community scale",
+      "body": "Large-number stats (100M+ downloads, 6K+ customers, Fortune 10) on dark band — hard metrics after product depth.",
+      "confidence": "high",
+      "kinds": [
+        "observed",
+        "transferable"
+      ]
+    },
+    {
+      "id": "a11",
+      "frame": "frame-09",
+      "number": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.55
+      },
+      "category": "narrative",
+      "label": "Closing conversion beat",
+      "body": "Final dark band repeats dual CTAs with dot-matrix wordmark texture — bookends hero geometry for narrative closure.",
+      "confidence": "high",
+      "kinds": [
+        "observed",
+        "transferable"
+      ]
+    },
+    {
+      "id": "a12",
+      "frame": "frame-09",
+      "number": 3,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.85
+      },
+      "category": "space-components",
+      "label": "Footer as sitemap",
+      "body": "Three-column link grid + newsletter on light footer; oversized outline logotype as ambient brand mark — utility over decoration.",
+      "confidence": "high",
+      "kinds": [
+        "observed",
+        "transferable"
+      ]
+    }
+  ],
+  "transferableRules": [
+    {
+      "id": "tr-1",
+      "rule": "Lead dev-platform landings with a lifecycle or workflow metaphor before showing dense product UI.",
+      "kinds": [
+        "transferable"
+      ]
+    },
+    {
+      "id": "tr-2",
+      "rule": "Use dark canvas + one luminous accent on headline/key diagram; alternate to light bands for long-scroll readability.",
+      "kinds": [
+        "transferable"
+      ]
+    },
+    {
+      "id": "tr-3",
+      "rule": "Pair filled primary pill CTA with ghost secondary CTA of identical geometry.",
+      "kinds": [
+        "transferable"
+      ]
+    },
+    {
+      "id": "tr-4",
+      "rule": "Sequence credibility: hero promise → platform modules (UI proof) → OSS/framework cards → customer carousel → quantified stats → demo CTA.",
+      "kinds": [
+        "transferable",
+        "observed"
+      ]
+    },
+    {
+      "id": "tr-5",
+      "rule": "Scroll-synced sidebar rail beats animating every section on developer marketing pages.",
+      "kinds": [
+        "transferable",
+        "observed"
+      ]
+    },
+    {
+      "id": "tr-6",
+      "rule": "Do not copy LangChain logomark, glow illustration, lifecycle graphic, or customer logos.",
+      "kinds": [
+        "brand-specific"
+      ]
+    }
+  ]
+}

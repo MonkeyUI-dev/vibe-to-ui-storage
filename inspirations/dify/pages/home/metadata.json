@@ -1,0 +1,55 @@
+{
+  "kind": "page",
+  "id": "dify/home",
+  "productId": "dify",
+  "pageSlug": "home",
+  "sourceKind": "url",
+  "sourceUrl": "https://dify.ai/zh",
+  "finalUrl": "https://dify.ai/zh",
+  "title": "Dify - 构建生产级 AI 应用",
+  "description": "Dify 是开源的 LLM 应用开发平台，助你从原型快速走向生产。",
+  "createdAt": "2026-07-26T04:00:45Z",
+  "updatedAt": "2026-07-26T04:15:00Z",
+  "pageType": "landing",
+  "pageTypeConfidence": "high",
+  "pageTypeEvidence": [
+    "Persuasive marketing narrative with hero claim",
+    "Product video stage + Workflow UI evidence",
+    "Enterprise logo wall and deploy-path cards",
+    "Closing business-value CTA and footer IA"
+  ],
+  "keywords": [
+    "landing",
+    "production",
+    "agentic",
+    "workflow",
+    "white-canvas",
+    "scarce-blue",
+    "soehne",
+    "sticky-nav",
+    "deploy-triad"
+  ],
+  "cssVars": {
+    "--nav-h": "44px–60px (sticky)",
+    "--accent-blue": "rgb(0, 51, 255)",
+    "--ink": "rgb(1, 9, 22)"
+  },
+  "fonts": [
+    "Söhne, ui-sans-serif, system-ui, sans-serif",
+    "Söhne Mono, ui-monospace, monospace"
+  ],
+  "captureStatus": "agent-provided",
+  "captureCoverage": "full-scroll",
+  "analysisStatus": "enriched",
+  "themeProfile": null,
+  "frames": [
+    "fullpage.jpg",
+    "frame-01.jpg",
+    "frame-02.jpg",
+    "frame-03.jpg",
+    "frame-04.jpg",
+    "frame-05.jpg",
+    "frame-06.jpg",
+    "frame-07.jpg"
+  ]
+}

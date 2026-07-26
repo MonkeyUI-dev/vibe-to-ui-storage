@@ -1,0 +1,37 @@
+{
+  "kind": "page",
+  "id": "langchain/engine",
+  "productId": "langchain",
+  "pageSlug": "engine",
+  "sourceKind": "url",
+  "sourceUrl": "https://www.langchain.com/langsmith/engine",
+  "finalUrl": "https://www.langchain.com/langsmith/engine",
+  "title": "Engine",
+  "description": "LangSmith Engine analyzes production traces, groups related failures, and recommends fixes so your team can improve agent quality faster.",
+  "createdAt": "2026-07-26T02:35:39Z",
+  "updatedAt": "2026-07-26T03:12:47Z",
+  "pageType": "landing",
+  "pageTypeConfidence": "medium",
+  "pageTypeEvidence": [
+    "Heuristic score 4 for landing"
+  ],
+  "keywords": [
+    "landing"
+  ],
+  "cssVars": {},
+  "fonts": [],
+  "captureStatus": "agent-provided",
+  "captureCoverage": "full-scroll",
+  "analysisStatus": "scaffold",
+  "themeProfile": null,
+  "frames": [
+    "fullpage.png",
+    "frame-01.png",
+    "frame-02.png",
+    "frame-03.png",
+    "frame-04.png",
+    "frame-05.png",
+    "frame-06.png",
+    "frame-07.png"
+  ]
+}

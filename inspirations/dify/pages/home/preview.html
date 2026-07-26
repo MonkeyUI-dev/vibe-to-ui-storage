@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Inspiration preview — dify/home</title>
+<style>:root { --paper:#DDCED2; --ink:#121212; --signal:#003BFF; --surface:#F8F9FA; --muted:#5C5C5C; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--paper); color:var(--ink); font-family:Inter,"Noto Sans SC","PingFang SC",sans-serif; }
+header { padding:48px max(24px,calc((100vw - 1440px)/2)); border-bottom:2px solid var(--ink); }
+.eyebrow { font:700 12px "JetBrains Mono","SFMono-Regular",monospace; letter-spacing:.08em; }
+h1 { margin:12px 0; font-size:clamp(34px,6vw,76px); line-height:.92; letter-spacing:-.06em; }
+.lede { max-width:740px; margin:0; line-height:1.65; }
+.meta-row { margin-top:16px; display:flex; flex-wrap:wrap; gap:8px; }
+.pill { display:inline-block; padding:4px 10px; border:2px solid var(--ink); font:700 11px "JetBrains Mono",monospace; letter-spacing:.04em; }
+main { max-width:1840px; margin:0 auto; padding:42px 20px 80px; }
+.overview { display:grid; grid-template-columns:1fr; gap:28px; align-items:start; margin-bottom:48px; }
+.overview-synthesis { width:100%; }
+.analysis { background:var(--surface); border:2px solid var(--ink); padding:24px; box-shadow:8px 8px 0 var(--ink); }
+.analysis h2 { margin:6px 0 20px; font-size:28px; letter-spacing:-.04em; }
+.synthesis-pending { margin:0 0 16px; font-size:14px; line-height:1.65; color:var(--muted); }
+.traits { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); border:2px solid var(--ink); border-right:0; border-bottom:0; }
+.trait { min-height:144px; padding:16px; border-right:2px solid var(--ink); border-bottom:2px solid var(--ink); }
+.trait .label { font:700 11px "JetBrains Mono",monospace; color:var(--signal); }
+.trait h3 { margin:8px 0 6px; font-size:18px; letter-spacing:-.03em; }
+.trait p { margin:0; font-size:14px; line-height:1.55; }
+.seed { margin-top:20px; padding:16px; background:var(--paper); border-left:6px solid var(--signal); }
+.seed .eyebrow { margin-bottom:8px; }
+.seed p { margin:0; font-size:14px; line-height:1.65; }
+.frame { margin:0 0 36px; }
+.frame-shell { display:grid; grid-template-columns:minmax(0,4fr) minmax(300px,1fr); align-items:stretch; border:2px solid var(--ink); box-shadow:8px 8px 0 var(--ink); background:var(--paper); }
+.frame-shell.capture-only { grid-template-columns:1fr; }
+.capture { position:relative; min-width:0; overflow:hidden; background:#030712; line-height:0; }
+.capture > img { width:100%; height:auto; display:block; vertical-align:top; }
+.marker { position:absolute; left:var(--x); top:var(--y); width:25px; height:25px; transform:translate(-50%,-50%); display:grid; place-items:center; border:3px solid var(--surface); border-radius:50%; background:var(--signal); color:#fff; font:700 10px "JetBrains Mono",monospace; box-shadow:0 0 0 1px var(--signal); cursor:pointer; z-index:2; padding:0; }
+.marker[aria-current="true"] { outline:2px solid #fff; outline-offset:2px; }
+.rail { min-width:0; padding:22px; display:flex; flex-direction:column; gap:16px; border-left:2px solid var(--ink); }
+.rail-head { margin-bottom:auto; }
+.rail h2 { margin:6px 0 0; font-size:22px; letter-spacing:-.04em; }
+.note { display:grid; grid-template-columns:42px minmax(0,1fr); border:2px solid var(--ink); background:var(--surface); cursor:pointer; }
+.note[aria-current="true"] { box-shadow:inset 0 0 0 2px var(--signal); }
+.note-no { display:grid; place-items:center; align-self:stretch; min-height:42px; background:var(--signal); color:#fff; font:700 12px "JetBrains Mono",monospace; }
+.note-body { min-width:0; padding:13px 14px 14px; }
+.note h3 { margin:0 0 7px; font-size:16px; letter-spacing:-.03em; line-height:1.2; overflow-wrap:anywhere; }
+.note p { margin:0; font-size:14px; line-height:1.55; overflow-wrap:anywhere; }
+.note .kinds { margin-top:8px; display:flex; flex-wrap:wrap; gap:4px; }
+.kind { font:700 10px "JetBrains Mono",monospace; padding:2px 6px; border:1px solid var(--ink); color:var(--muted); }
+.caption { display:flex; justify-content:space-between; gap:16px; margin:12px 0 0; font:700 13px "JetBrains Mono",monospace; }
+.caption span:last-child { color:var(--signal); }
+.empty { padding:16px; color:var(--muted); font-size:14px; border:2px dashed var(--ink); }
+@media (max-width:860px) { .traits { grid-template-columns:repeat(2,minmax(0,1fr)); } .frame-shell { grid-template-columns:1fr; } .rail { border-left:0; border-top:2px solid var(--ink); } .rail-head { margin-bottom:0; } }
+@media (max-width:560px) { header { padding:32px 20px; } main { padding:28px 12px 60px; } .traits { grid-template-columns:1fr; } .caption { flex-direction:column; gap:4px; } .rail { padding:16px; } }</style>
+</head>
+<body>
+  <header>
+    <div class="eyebrow">DESIGN INSPIRATION LIBRARY / FULL-PAGE STUDY</div>
+    <h1>Dify - 构建生产级 AI 应用</h1>
+    <p class="lede">Read the overall visual DNA first, then frame-by-frame evidence below. Numbered markers on each capture map to aesthetic notes on the right.</p>
+    <div class="meta-row">
+      <span class="pill">landing</span>
+      <span class="pill">dify/home</span>
+    </div>
+  </header>
+  <main>
+    <section class="overview" id="overview" hidden></section>
+    <div id="frames"></div>
+  </main>
+  <script id="inspiration-data" type="application/json">{"id":"dify/home","title":"Dify - 构建生产级 AI 应用","pageType":"landing","source":"https://dify.ai/zh","annotations":{"version":1,"inspirationId":"dify/home","generatedAt":"2026-07-26T04:10:00Z","themeProfile":null,"pageType":"landing","categoriesCovered":["composition","color","typography","space-components","visual-evidence","narrative"],"frames":[{"id":"fullpage","file":"captures/fullpage.jpg","label":"fullpage","annotations":[]},{"id":"frame-01","file":"captures/frame-01.jpg","label":"frame-01","annotations":["a1","a2","a3"]},{"id":"frame-02","file":"captures/frame-02.jpg","label":"frame-02","annotations":["a4","a5"]},{"id":"frame-03","file":"captures/frame-03.jpg","label":"frame-03","annotations":["a6","a7","a8"]},{"id":"frame-04","file":"captures/frame-04.jpg","label":"frame-04","annotations":["a9","a10","a11"]},{"id":"frame-05","file":"captures/frame-05.jpg","label":"frame-05","annotations":["a12","a13","a14"]},{"id":"frame-06","file":"captures/frame-06.jpg","label":"frame-06","annotations":["a15","a16"]},{"id":"frame-07","file":"captures/frame-07.jpg","label":"frame-07","annotations":["a17","a18"]}],"annotations":[{"id":"a1","frame":"frame-01","number":1,"anchor":{"x":0.28,"y":0.42},"category":"composition","label":"左主张 / 右结构意象","body":"首屏左右分栏：超大标题与短副句占左，右侧混凝土柱摄影提供「建造/结构」隐喻；主转化按钮留在 sticky 顶栏，英雄区不被 CTA 挤占。","confidence":"high","kinds":["observed","transferable"]},{"id":"a2","frame":"frame-01","number":2,"anchor":{"x":0.22,"y":0.36},"category":"color","label":"关键词蓝染","body":"白底近黑字，「生产级」用品牌蓝局部染色；顶栏「开始使用」同色实心按钮 —— 蓝只作信号，不作大面积渐变墙纸。","confidence":"high","kinds":["observed","transferable"]},{"id":"a3","frame":"frame-01","number":3,"anchor":{"x":0.3,"y":0.34},"category":"typography","label":"建筑招牌式标题","body":"Söhne 约 96px、字重 500、极紧字距、行高≈字号，像招牌而非博客标题；导航保持小字冷静退后。","confidence":"high","kinds":["observed","transferable"]},{"id":"a4","frame":"frame-02","number":1,"anchor":{"x":0.5,"y":0.35},"category":"visual-evidence","label":"深蓝产品舞台","body":"全宽圆角深蓝卡承载产品视频/抽象连线，作为英雄后的第一证据层；白线与微点暗示网络/agent 拓扑，但不替代真 UI。","confidence":"high","kinds":["observed","transferable"]},{"id":"a5","frame":"frame-02","number":2,"anchor":{"x":0.45,"y":0.82},"category":"narrative","label":"从舞台切到社会证明","body":"舞台下方立刻进入「全球开发者与企业的共同选择」—— 叙事从能力展示切到信任背书，密度仍偏低。","confidence":"high","kinds":["observed","transferable"]},{"id":"a6","frame":"frame-03","number":1,"anchor":{"x":0.2,"y":0.45},"category":"composition","label":"左摄影 / 右证据","body":"证明带用大面积岩石摄影压左轴，右侧交织 logo 网格与客户引言，形成「材质气质 + 企业可信」双通道。","confidence":"high","kinds":["observed","transferable"]},{"id":"a7","frame":"frame-03","number":2,"anchor":{"x":0.62,"y":0.4},"category":"visual-evidence","label":"Logo 墙密度","body":"灰度企业标识密铺但留白仍在；引言段落穿插其中，避免纯 logo 条的冷漠感。","confidence":"high","kinds":["observed","transferable"]},{"id":"a8","frame":"frame-03","number":3,"anchor":{"x":0.55,"y":0.7},"category":"space-components","label":"引言与标识共面","body":"客户引言不以厚重卡片堆叠，而与 logo 共处同一浅色平面 —— 组件语言偏编辑排版，而非仪表盘卡片墙。","confidence":"medium","kinds":["observed","inferred"]},{"id":"a9","frame":"frame-04","number":1,"anchor":{"x":0.5,"y":0.22},"category":"narrative","label":"部署路径决策点","body":"「按你的方式部署 Dify」把故事从信任切到购买/接入路径：云托管、企业自托管、开源社区三选一。","confidence":"high","kinds":["observed","transferable"]},{"id":"a10","frame":"frame-04","number":2,"anchor":{"x":0.5,"y":0.55},"category":"space-components","label":"等权三栏卡","body":"三张白卡片等宽并列：标签（Managed / Self-hosted / Open-Source）+ 清单 + 底部按钮；开源卡用描边次级按钮区分权重。","confidence":"high","kinds":["observed","transferable"]},{"id":"a11","frame":"frame-04","number":3,"anchor":{"x":0.2,"y":0.78},"category":"visual-evidence","label":"合规贴决策","body":"GDPR / SOC2 / ISO 徽章贴在部署卡底部 —— 合规证据紧邻「如何获得」，服务采购决策而非装饰。","confidence":"high","kinds":["observed","transferable"]},{"id":"a12","frame":"frame-05","number":1,"anchor":{"x":0.35,"y":0.55},"category":"visual-evidence","label":"真 Workflow UI","body":"左侧大画布展示真实节点图（开始、迭代、LLM、搜索、分支、回答），用产品 chrome 证明「可见的执行路径」。","confidence":"high","kinds":["observed","transferable"]},{"id":"a13","frame":"frame-05","number":2,"anchor":{"x":0.82,"y":0.55},"category":"composition","label":"右章节 rail","body":"右侧竖向能力列表（Workflow / Agent / 知识流水线 / 插件 / 发布与监控）作章节导航，选中态浅底高亮 —— 长能力叙事的扫描入口。","confidence":"high","kinds":["observed","transferable"]},{"id":"a14","frame":"frame-05","number":3,"anchor":{"x":0.5,"y":0.18},"category":"typography","label":"章节蓝染「一切」","body":"能力总标题继续「大字 + 关键词蓝染」节奏，与首屏「生产级」手法呼应，形成全页排版母题。","confidence":"high","kinds":["observed","transferable"]},{"id":"a15","frame":"frame-06","number":1,"anchor":{"x":0.5,"y":0.35},"category":"narrative","label":"商业价值收口","body":"末屏从能力细节回到结果承诺：「让 AI 愿景即刻转化为商业价值」，副句短、主次 CTA 清晰（开始构建 / 联系销售）。","confidence":"high","kinds":["observed","transferable"]},{"id":"a16","frame":"frame-06","number":2,"anchor":{"x":0.5,"y":0.7},"category":"color","label":"高调摄影底","body":"雪山弱对比摄影淡入白底，气氛开放但不抢文字；蓝仍只出现在关键词与主按钮。","confidence":"high","kinds":["observed","inferred"]},{"id":"a17","frame":"frame-07","number":1,"anchor":{"x":0.35,"y":0.4},"category":"space-components","label":"页脚信息架构","body":"多列链接（资源 / 公司 / 合作 / 条款）+ 右侧社媒与使命短句 + 合规章；白底、低装饰，服务查找而非营销戏剧。","confidence":"high","kinds":["observed","transferable"]},{"id":"a18","frame":"frame-07","number":2,"anchor":{"x":0.75,"y":0.85},"category":"color","label":"字标蓝点收束","body":"超大 Dify 字标中「i」保留品牌蓝点，把全页稀缺蓝母题收到页脚 —— 品牌记忆点，勿照搬字形。","confidence":"high","kinds":["observed","brand-specific"]}],"synthesis":{"eyebrow":"DESIGN SYSTEM ANALYSIS / OBSERVED","title":"Dify 的视觉 DNA","traits":[{"label":"MOOD","title":"冷静的生产可信","body":"白纸、建筑/地质摄影与稀缺蓝，让 Agentic 平台显得可采购、可部署，而不是炫技 AI 科幻。"},{"label":"COMPOSITION","title":"主张 → 舞台 → 证明 → 路径 → 能力 → 收口","body":"首屏左文右意象；随后深蓝产品舞台、logo/引言、三栏部署、左 UI/右 rail，最后中轴 CTA。"},{"label":"TYPE","title":"招牌式大标题 + 蓝染关键词","body":"中等字重超大标题、极紧字距；章节继续局部着色；导航与正文保持克制。"},{"label":"COLOR","title":"白 / 墨 / 单一蓝","body":"画布近白，正文近黑，蓝只服务 CTA、关键词与 logo 点缀；深蓝块用于证据舞台。"},{"label":"EVIDENCE","title":"视频 + 真 UI + 企业背书","body":"产品舞台视频、Workflow 节点画布、全球 logo/引言与合规徽章共同构成可信度。"},{"label":"RHYTHM","title":"疏密交替的长滚动说服","body":"英雄与收口疏；证明与部署中密；能力区用 rail 消化深度，避免首屏堆功能。"}],"seed":{"eyebrow":"DESIGN.md READY SEED","visualDirection":"白纸上的生产级冷静：超大无衬线主张、稀缺蓝信号、建筑摄影气氛，以及真实工作流 UI/视频证据。","dos":"顶栏固定主转化；关键词局部染色；三路径等权对比卡；左证据/右章节 rail；合规章贴近采购决策。","donts":"不要复制 Dify 字标/客户 logo/摄影库；不要首屏堆卡片或紫色光晕动效；不要把蓝铺成大面积渐变。"}},"transferableRules":[{"id":"tr-1","rule":"白纸 + 近黑字 + 单一稀缺强调色；用关键词局部染色形成标题节奏。","kinds":["transferable"]},{"id":"tr-2","rule":"英雄后立刻给产品舞台，再给社会证明，然后才是部署路径与能力深度。","kinds":["transferable"]},{"id":"tr-3","rule":"多获取路径用等权三栏卡；开源用次级描边按钮降权。","kinds":["transferable"]},{"id":"tr-4","rule":"能力叙事采用左真实 UI / 右竖向章节 rail。","kinds":["transferable"]},{"id":"tr-5","rule":"勿移植 Dify 字标、客户标识、具体摄影与营销句式。","kinds":["brand-specific"]}]}}</script>
+  <script>
+(function () {
+  const data = JSON.parse(document.getElementById('inspiration-data').textContent);
+  const annById = Object.fromEntries((data.annotations.annotations || []).map(a => [a.id, a]));
+  const overviewEl = document.getElementById('overview');
+  const framesEl = document.getElementById('frames');
+  let activeId = null;
+
+  function pad(n) { return String(n || '').padStart(2, '0'); }
+
+  function frameAnns(frame) {
+    const byFrame = (data.annotations.annotations || []).filter(a => a.frame === frame.id).slice(0, 3);
+    if (byFrame.length) return byFrame;
+    const ids = frame.annotations || [];
+    return ids.map(id => annById[id]).filter(Boolean).slice(0, 3);
+  }
+
+  function spreadAnchors(anns) {
+    const seen = new Map();
+    return anns.map((a) => {
+      const x = (a.anchor && a.anchor.x) || 0.5;
+      const y = (a.anchor && a.anchor.y) || 0.5;
+      const key = x.toFixed(3) + ',' + y.toFixed(3);
+      const n = seen.get(key) || 0;
+      seen.set(key, n + 1);
+      if (!n) return { ann: a, x: x, y: y };
+      const spread = 0.035;
+      const angle = (n - 1) * ((Math.PI * 2) / 3) - Math.PI / 2;
+      return { ann: a, x: Math.min(0.96, Math.max(0.04, x + Math.cos(angle) * spread)), y: Math.min(0.96, Math.max(0.04, y + Math.sin(angle) * spread)) };
+    });
+  }
+
+  function setActive(id) {
+    activeId = id;
+    document.querySelectorAll('.marker').forEach(el => {
+      if (el.dataset.ann === id) el.setAttribute('aria-current', 'true');
+      else el.removeAttribute('aria-current');
+    });
+    document.querySelectorAll('.note').forEach(el => {
+      if (el.dataset.ann === id) el.setAttribute('aria-current', 'true');
+      else el.removeAttribute('aria-current');
+    });
+    const note = document.querySelector('.note[data-ann="' + id + '"]');
+    if (note) note.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  }
+
+  const allFrames = data.annotations.frames || [];
+  if (!allFrames.length) {
+    framesEl.innerHTML = '<div class="empty">No captures yet. Add images under captures/ and regenerate preview.</div>';
+    return;
+  }
+
+  function escapeText(s) {
+    return String(s ?? '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  function renderSynthesis(synthesis, meta) {
+    if (!synthesis) return '';
+    const pending = synthesis.status === 'scaffold';
+    const traits = (synthesis.traits || []).map((t) =>
+      '<article class="trait"><div class="label">' + escapeText(t.label) + '</div>' +
+      '<h3>' + escapeText(t.title) + '</h3><p>' + escapeText(t.body) + '</p></article>'
+    ).join('');
+    const seed = synthesis.seed;
+    const seedHtml = seed ? (
+      '<div class="seed"><div class="eyebrow">' + escapeText(seed.eyebrow || 'DESIGN.md READY SEED') + '</div><p>' +
+      (seed.visualDirection ? '<b>Visual Direction:</b> ' + escapeText(seed.visualDirection) + '<br>' : '') +
+      (seed.dos ? '<b>Do:</b> ' + escapeText(seed.dos) + '<br>' : '') +
+      (seed.donts ? '<b>Don\'t:</b> ' + escapeText(seed.donts) : '') +
+      '</p></div>'
+    ) : '';
+    const metaLine = meta && meta.source
+      ? '<p class="synthesis-pending">' + escapeText(meta.source) + '</p>'
+      : '';
+    const pendingLine = pending
+      ? '<p class="synthesis-pending">Scaffold — enrich traits/seed in annotations.json synthesis, then rebuild-preview.</p>'
+      : '';
+    return '<div class="analysis overview-synthesis"><div class="eyebrow">' + escapeText(synthesis.eyebrow || 'DESIGN SYSTEM ANALYSIS / OBSERVED') + '</div>' +
+      '<h2>' + escapeText(synthesis.title || 'Visual DNA') + '</h2>' +
+      metaLine + pendingLine +
+      (traits ? '<div class="traits">' + traits + '</div>' : '') +
+      seedHtml + '</div>';
+  }
+
+  const viewportFrames = allFrames.filter(f => f.id !== 'fullpage');
+  const displayFrames = viewportFrames.length ? viewportFrames : allFrames.filter(f => frameAnns(f).length > 0);
+  const synthesis = data.annotations.synthesis;
+
+  if (synthesis) {
+    overviewEl.hidden = false;
+    overviewEl.innerHTML = renderSynthesis(synthesis, { source: data.source, title: data.title });
+  }
+
+  if (!displayFrames.length) {
+    framesEl.innerHTML = '<div class="empty">No viewport frames yet.</div>';
+    return;
+  }
+
+  const total = displayFrames.length;
+  displayFrames.forEach((frame, idx) => {
+    const anns = frameAnns(frame);
+    const section = document.createElement('section');
+    section.className = 'frame';
+
+    const shell = document.createElement('div');
+    shell.className = 'frame-shell' + (anns.length ? '' : ' capture-only');
+
+    const capture = document.createElement('div');
+    capture.className = 'capture';
+    const img = document.createElement('img');
+    img.src = frame.file;
+    img.alt = frame.label || frame.id;
+    img.loading = idx === 0 ? 'eager' : 'lazy';
+    capture.appendChild(img);
+
+    spreadAnchors(anns).forEach(({ ann: a, x, y }) => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'marker';
+      btn.textContent = pad(a.number);
+      btn.dataset.ann = a.id;
+      btn.style.setProperty('--x', x * 100 + '%');
+      btn.style.setProperty('--y', y * 100 + '%');
+      btn.title = a.label || '';
+      btn.addEventListener('click', () => setActive(a.id));
+      capture.appendChild(btn);
+    });
+    shell.appendChild(capture);
+
+    if (anns.length) {
+      const rail = document.createElement('aside');
+      rail.className = 'rail';
+      const head = document.createElement('div');
+      head.className = 'rail-head';
+      const categories = [...new Set(anns.map(a => a.category).filter(Boolean))];
+      head.innerHTML =
+        '<div class="eyebrow">AESTHETIC ANALYSIS</div>' +
+        '<h2>' + pad(idx + 1) + ' / ' + pad(total) + ' · ' + escapeText(frame.title || frame.label || frame.id) + '</h2>';
+      rail.appendChild(head);
+
+      anns.forEach(a => {
+        const note = document.createElement('article');
+        note.className = 'note';
+        note.dataset.ann = a.id;
+        note.tabIndex = 0;
+        note.addEventListener('click', () => setActive(a.id));
+        note.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setActive(a.id); }
+        });
+        const kinds = (a.kinds || []).map(k => '<span class="kind">' + k + '</span>').join('');
+        note.innerHTML =
+          '<div class="note-no">' + pad(a.number) + '</div>' +
+          '<div class="note-body"><h3>' + (a.label || '') + '</h3>' +
+          '<p>' + (a.body || '') + '</p>' +
+          (kinds ? '<div class="kinds">' + kinds + '</div>' : '') +
+          '</div>';
+        rail.appendChild(note);
+      });
+      shell.appendChild(rail);
+    }
+
+    section.appendChild(shell);
+
+    const caption = document.createElement('div');
+    caption.className = 'caption';
+    const tag = anns.length
+      ? [...new Set(anns.map(a => a.category).filter(Boolean))].slice(0, 2).join(' · ')
+      : 'awaiting annotations';
+    const frameTitle = frame.title || frame.label || frame.id;
+    caption.innerHTML =
+      '<span>' + pad(idx + 1) + ' / ' + pad(total) + ' · ' + escapeText(frameTitle) + '</span>' +
+      '<span>' + escapeText(tag) + '</span>';
+    section.appendChild(caption);
+
+    framesEl.appendChild(section);
+  });
+
+  const first = (data.annotations.annotations || [])[0];
+  if (first) setActive(first.id);
+})();
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+{
+  "kind": "page",
+  "id": "langchain/home",
+  "productId": "langchain",
+  "pageSlug": "home",
+  "sourceKind": "url",
+  "sourceUrl": "https://www.langchain.com/",
+  "finalUrl": "https://www.langchain.com/",
+  "title": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+  "description": "LangChain provides the engineering platform and open source frameworks developers use to build, test, and deploy reliable AI agents.",
+  "createdAt": "2026-07-25T14:31:20Z",
+  "updatedAt": "2026-07-26T02:49:27Z",
+  "pageType": "landing",
+  "pageTypeConfidence": "medium",
+  "pageTypeEvidence": [
+    "Heuristic score 4 for landing"
+  ],
+  "keywords": [
+    "landing"
+  ],
+  "cssVars": {},
+  "fonts": [],
+  "captureStatus": "agent-provided",
+  "captureCoverage": "full-scroll",
+  "analysisStatus": "scaffold",
+  "themeProfile": null,
+  "frames": [
+    "fullpage.jpg",
+    "frame-01.jpg",
+    "frame-02.jpg",
+    "frame-03.jpg",
+    "frame-04.jpg",
+    "frame-05.jpg",
+    "frame-06.jpg",
+    "frame-07.jpg",
+    "frame-08.jpg",
+    "frame-09.jpg",
+    "frame-10.jpg"
+  ]
+}
